@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.js"
+      integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
+      crossorigin="anonymous"
+    ></script>
+    <script src="src/index.js" type="text/javascript"></script>
+    <script src="src/entries.js" type="text/javascript"></script>
+    <title>Journal Website</title>
+  </head>
+  <body>
+    <h1>Journal Website</h1>
+    <form id="journal-form">
+      <label for="title">Entry Title:</label>
+      <input id="title" type="shortText" />
+      <label for="entry">Journal Entry:</label>
+      <input id="entry" type="longText" />
+      <button type="submit">Submit</button>
+    </form>
+    <ul id="showEntry"></ul>
+  </body>
+</html>
