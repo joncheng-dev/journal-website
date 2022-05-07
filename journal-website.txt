@@ -1,0 +1,35 @@
+to do:
+--------------
+user logic: src/index.js
+business : src/entries.js
+----------------
+
+journaling website
+-User can write entries -- including title & body
+-Entry object:
+--method to return # words in entry.
+--method(s) to return # of vowels / consonants
+--method 'getTeaser' returns first sentence of entry (or 1st 8 words)
+
+---------------
+TESTS -- 
+
+PASS
+method takes a string, splits into elements of an array when there is a space. Then returns length of the array created. This tells number of words in the journal entry. 
+
+PASS
+remove all noncharacters in string
+
+PASS
+lowercase all words in the string.
+string.toLowerCase();
+
+PASS
+count number of vowels.
+
+PASS
+count number of consonants
+---------------
+
+connect user interface with business interface to perform:
+--method(s) to return # of vowels / consonants
