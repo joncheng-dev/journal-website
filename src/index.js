@@ -1,3 +1,9 @@
+import $ from "jquery";
+import "bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./css/styles.css";
+import Entry from "./entries.js";
+
 $(document).ready(function () {
   $("#journal-form").submit(function (event) {
     event.preventDefault();

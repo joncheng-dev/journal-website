@@ -1,4 +1,4 @@
-function Entry(journalTitle, journalEntry) {
+export default function Entry(journalTitle, journalEntry) {
   this.journalTitle = journalTitle;
   this.journalEntry = journalEntry;
 }
