@@ -41,42 +41,9 @@ function isConsonant(character) {
   }
 }
 
-// Counts number of vowels.
-function countVowels(string) {
-  // Removes punctuation
-  const entryNoPunctuation = removePunctuation(string);
-  // Lowercases all remaining characters
-  const lowercaseEntry = entryNoPunctuation.toLowerCase();
-  // Loops through modified string and tallies up vowels.
-  let vowels = 0;
-  for (let i = 0; i < lowercaseEntry.length; i++) {
-    if (isVowel(lowercaseEntry[i]) === true) {
-      vowels++;
-    }
-  }
-  console.log("There are " + vowels + " vowels in the string.");
-  return vowels;
-}
-
-// Count consonants.
-function countConsonants(string) {
-  // Removes punctuation
-  const entryNoPunctuation = removePunctuation(string);
-  // Lowercases all remaining characters
-  const lowercaseEntry = entryNoPunctuation.toLowerCase();
-  // Loops through modified string and tallies up consonants.
-  let consonants = 0;
-  for (let i = 0; i < lowercaseEntry.length; i++) {
-    if (isConsonant(lowercaseEntry[i]) === true) {
-      consonants++;
-    }
-  }
-  console.log("There are " + consonants + " vowels in the string.");
-  return consonants;
-}
-
+// Prototypes
 Entry.prototype.showEntry = function () {
-  return "Show journal entry here!";
+  return this.journalEntry;
 };
 
 Entry.prototype.numberWords = function () {
@@ -85,11 +52,27 @@ Entry.prototype.numberWords = function () {
 };
 
 Entry.prototype.numberVowels = function () {
-  return "Number of vowels in entry: ";
+  const entryNoPunctuation = removePunctuation(this.journalEntry);
+  const lowercaseEntry = entryNoPunctuation.toLowerCase();
+  let vowels = 0;
+  for (let i = 0; i < lowercaseEntry.length; i++) {
+    if (isVowel(lowercaseEntry[i]) === true) {
+      vowels++;
+    }
+  }
+  return vowels;
 };
 
 Entry.prototype.numberConsonants = function () {
-  return "Number of consonants in entry: ";
+  const entryNoPunctuation = removePunctuation(this.journalEntry);
+  const lowercaseEntry = entryNoPunctuation.toLowerCase();
+  let consonants = 0;
+  for (let i = 0; i < lowercaseEntry.length; i++) {
+    if (isConsonant(lowercaseEntry[i]) === true) {
+      consonants++;
+    }
+  }
+  return consonants;
 };
 
 Entry.prototype.getTeaser = function () {

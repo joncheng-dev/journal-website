@@ -29,7 +29,20 @@ count number of vowels.
 
 PASS
 count number of consonants
+
+PASS
+make a row to show each:
+row 1 -> Number of Words in Entry
+row 2 -> Number of Vowels
+Row 3 -> Number of Consonants
+
+PASS
+connect user interface with business interface to perform:
+On click, show to html page..
+row 1 -> Number of Words in Entry
+row 2 -> Number of Vowels
+Row 3 -> Number of Consonants
 ---------------
 
-connect user interface with business interface to perform:
---method(s) to return # of vowels / consonants
+
+Button -> Get teaser. Return 1st sentence (or 8 words)
