@@ -42,7 +42,18 @@ On click, show to html page..
 row 1 -> Number of Words in Entry
 row 2 -> Number of Vowels
 Row 3 -> Number of Consonants
+
+PASS
+In user interface, separate display of.. 
+Entry Date
+Entry Itself 
+# of words,
+# of vowels, 
+# of consonants. 
+
 ---------------
 
+Display only first sentence (or first 8 words)
+--> use a method
 
-Button -> Get teaser. Return 1st sentence (or 8 words)
+Next have something to click that shows the rest of the entry. 

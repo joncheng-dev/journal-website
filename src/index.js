@@ -11,14 +11,14 @@ $("#journal-form").submit(function (event) {
   let journalTitle = $("#title").val();
   let journalEntry = $("#entry").val();
   let journal = new Entry(journalTitle, journalEntry);
-  let entryDate = journalTitle;
+  let entryTitle = journalTitle;
   let entry = journal.showEntry();
   let wordsOnly = journal.numberWords();
   let vowelCount = journal.numberVowels();
   let consonantCount = journal.numberConsonants();
 
   // Display to html
-  $("#showEntryDate").append("<p>" + entryDate + "</p>");
+  $("#showEntryTitle").append("<p>" + entryTitle + "</p>");
   $("#showEntry").append("<p>" + entry + "</p>");
   $("#numWords").append("<p>" + wordsOnly + "</p>");
   $("#numVowels").append("<p>" + vowelCount + "</p>");
