@@ -8,7 +8,6 @@ export default function Entry(journalTitle, journalEntry) {
 // Remove all non-alphanumeric characters from string
 function removePunctuation(string) {
   const stripped = string.replace(/[^a-z0-9 ]/gi, "");
-  console.log("Punctuation removed: " + stripped);
   return stripped;
 }
 
@@ -76,5 +75,28 @@ Entry.prototype.numberConsonants = function () {
 };
 
 Entry.prototype.getTeaser = function () {
+  let numberOfWords = this.numberWords();
+  if (numberOfWords > 8) {
+    console.log("Journal entry longer than 8 words.");
+  } else {
+    const separateWords = this.journalEntry.split(" ");
+    console.log("separateWords array: " + separateWords);
+    let print = "";
+    for (let i = 0; i < separateWords.length; i++) {
+      print += " " + separateWords[i];
+      if (
+        separateWords[i].indexOf(".") != -1 ||
+        separateWords[i].indexOf("!") != -1 ||
+        separateWords[i].indexOf("?") != -1
+      ) {
+        break;
+      }
+    }
+    console.log("Sentence: " + print);
+    console.log("Journal entry has 8 words or less.");
+  }
+  // const separateWords = this.journalEntry.split(" ");
+  // let sentence = "";
+  // sentence += separateWords.join(" ");
   return "First sentence, or first 8 words of entry: ";
 };

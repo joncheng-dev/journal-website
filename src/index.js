@@ -17,6 +17,8 @@ $("#journal-form").submit(function (event) {
   let vowelCount = journal.numberVowels();
   let consonantCount = journal.numberConsonants();
 
+  let teaser = journal.getTeaser();
+  console.log(teaser);
   // Display to html
   $("#showEntryTitle").append("<p>" + entryTitle + "</p>");
   $("#showEntry").append("<p>" + entry + "</p>");

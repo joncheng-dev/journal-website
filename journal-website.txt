@@ -51,9 +51,30 @@ Entry Itself
 # of vowels, 
 # of consonants. 
 
+PASS
+count number of words in entry. 
+
+PASS
+if entry > 8 words long,
+--> display something 
+
+PASS
+if entry < 8 words long,
+--> display something
+
+PASS
+if #words is 8 or less..  
+we're looking at an array..
+-> each word is an array entry.
+Find the first ? ! .
+identify that array entry (which word is it?)
+-> then display up to that word
 ---------------
 
-Display only first sentence (or first 8 words)
---> use a method
+if #words is more than 8..
+display the first 8 words of that entry. 
+(use loop to count through elements of array)
+(for loop to 8)
+
 
 Next have something to click that shows the rest of the entry. 
