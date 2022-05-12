@@ -69,12 +69,16 @@ we're looking at an array..
 Find the first ? ! .
 identify that array entry (which word is it?)
 -> then display up to that word
----------------
 
+PASS
 if #words is more than 8..
 display the first 8 words of that entry. 
 (use loop to count through elements of array)
 (for loop to 8)
 
+--------------------
+refactor code to reduce repetition
+
+connect this method to html / display rather than console.log
 
 Next have something to click that shows the rest of the entry. 

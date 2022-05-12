@@ -78,6 +78,13 @@ Entry.prototype.getTeaser = function () {
   let numberOfWords = this.numberWords();
   if (numberOfWords > 8) {
     console.log("Journal entry longer than 8 words.");
+    const separateWords = this.journalEntry.split(" ");
+    console.log("separateWords array: " + separateWords);
+    let print = "";
+    for (let i = 0; i < 8; i++) {
+      print += " " + separateWords[i];
+    }
+    console.log("Sentence: " + print);
   } else {
     const separateWords = this.journalEntry.split(" ");
     console.log("separateWords array: " + separateWords);
