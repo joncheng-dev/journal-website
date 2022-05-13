@@ -76,9 +76,13 @@ display the first 8 words of that entry.
 (use loop to count through elements of array)
 (for loop to 8)
 
---------------------
-refactor code to reduce repetition
+PASS
+refactor method code to reduce repetition
 
+PASS
 connect this method to html / display rather than console.log
+--------------------
 
 Next have something to click that shows the rest of the entry. 
+
+Improve user interface on html

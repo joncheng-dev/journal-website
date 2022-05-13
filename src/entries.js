@@ -76,19 +76,13 @@ Entry.prototype.numberConsonants = function () {
 
 Entry.prototype.getTeaser = function () {
   let numberOfWords = this.numberWords();
+  let print = "";
+  const separateWords = this.journalEntry.split(" ");
   if (numberOfWords > 8) {
-    console.log("Journal entry longer than 8 words.");
-    const separateWords = this.journalEntry.split(" ");
-    console.log("separateWords array: " + separateWords);
-    let print = "";
     for (let i = 0; i < 8; i++) {
       print += " " + separateWords[i];
     }
-    console.log("Sentence: " + print);
   } else {
-    const separateWords = this.journalEntry.split(" ");
-    console.log("separateWords array: " + separateWords);
-    let print = "";
     for (let i = 0; i < separateWords.length; i++) {
       print += " " + separateWords[i];
       if (
@@ -99,11 +93,6 @@ Entry.prototype.getTeaser = function () {
         break;
       }
     }
-    console.log("Sentence: " + print);
-    console.log("Journal entry has 8 words or less.");
   }
-  // const separateWords = this.journalEntry.split(" ");
-  // let sentence = "";
-  // sentence += separateWords.join(" ");
-  return "First sentence, or first 8 words of entry: ";
+  return print;
 };
