@@ -83,6 +83,5 @@ PASS
 connect this method to html / display rather than console.log
 --------------------
 
-Next have something to click that shows the rest of the entry. 
-
-Improve user interface on html
+Put journal entries into a table. Cleaner output.
+(Improve user interface on html)

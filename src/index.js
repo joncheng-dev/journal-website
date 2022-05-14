@@ -6,6 +6,7 @@ import "./css/styles.css";
 import Entry from "./entries.js";
 
 // User interface logic
+let rowId = 0;
 $("#journal-form").submit(function (event) {
   event.preventDefault();
   let journalTitle = $("#title").val();
@@ -17,11 +18,25 @@ $("#journal-form").submit(function (event) {
   let vowelCount = journal.numberVowels();
   let consonantCount = journal.numberConsonants();
   let teaser = journal.getTeaser();
-  // Display to html
-  $("#showTeaser").append("<p>" + teaser + "</p>");
-  $("#showEntryTitle").append("<p>" + entryTitle + "</p>");
-  $("#showEntry").append("<p>" + entry + "</p>");
-  $("#numWords").append("<p>" + wordsOnly + "</p>");
-  $("#numVowels").append("<p>" + vowelCount + "</p>");
-  $("#numConsonants").append("<p>" + consonantCount + "</p>");
+  // Newly added. Append rows to table.
+  $("#tableBody").append(
+    "<tr><td class='row-index text-center'><p>" +
+      entryTitle +
+      "</p></td>" +
+      "<td class='text-center'><p>" +
+      teaser +
+      "</p></td>" +
+      "<td class='text-center'><p>" +
+      entry +
+      "</p></td>" +
+      "<td class='text-center'><p>" +
+      wordsOnly +
+      "</p></td>" +
+      "<td class='text-center'><p>" +
+      vowelCount +
+      "</p></td>" +
+      "<td class='text-center'><p>" +
+      consonantCount +
+      "</p></td></tr>"
+  );
 });
